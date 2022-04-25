@@ -78,10 +78,7 @@ public class ParkingLotRunner {
 					int time = scan.nextInt();
 					int price = pObj.paymentCalculator(time);
 					System.out.println("The price is " + price);
-					Payment payment = new Payment();
-					payment.setAmount(price);
-					payment.setTokenNumber(currToken);
-					payment.setPaymentStatus(true);
+					Payment payment = ObjectGenerator.paymentSetter(price, currToken);
 					try {
 						System.out.println(pObj.payment(payment, number, currToken));
 					} catch (Exception e) {
@@ -104,10 +101,7 @@ public class ParkingLotRunner {
 					System.out.println(e.getMessage());
 					continue;
 				}
-				Payment payment = new Payment();
-				payment.setAmount(price);
-				payment.setTokenNumber(token1);
-				payment.setPaymentStatus(true);
+				Payment payment = ObjectGenerator.paymentSetter(price, token1);
 				if (!info.equals("Yes")) {
 					scan.nextLine();
 					System.out.println("1.Cash\n2.Credit card");
