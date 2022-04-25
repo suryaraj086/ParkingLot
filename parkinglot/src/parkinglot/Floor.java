@@ -3,7 +3,7 @@ package parkinglot;
 public class Floor {
 
 	int totalSpace = 10;
-	int compackSize = 4;
+	int compactSize = 4;
 	int electricSpot = 2;
 	int largeSize = 1;
 	int motorCycle = 2;
@@ -25,12 +25,12 @@ public class Floor {
 		this.totalSpace = totalSpace;
 	}
 
-	public int getCompackSize() {
-		return compackSize;
+	public int getCompactSize() {
+		return compactSize;
 	}
 
-	public void setCompackSize(int compackSize) {
-		this.compackSize = compackSize;
+	public void setCompactSize(int compackSize) {
+		this.compactSize = compackSize;
 	}
 
 	public int getElectricSpot() {
@@ -59,8 +59,8 @@ public class Floor {
 
 	@Override
 	public String toString() {
-		return "Floor [totalSpace=" + totalSpace + ", compackSize=" + compackSize + ", electricSpot=" + electricSpot
-				+ ", largeSize=" + largeSize + ", motorCycle=" + motorCycle + ", handicap=" + handicap + "]";
+		return " Compact = " + compactSize + ", Electric = " + electricSpot + ", large = " + largeSize
+				+ ", Motor Cycle = " + motorCycle + ", Handicap = " + handicap;
 	}
 
 }

@@ -1,17 +1,17 @@
 package parkinglot;
 
 public class Vehicle {
-	String vehicleType = "";
+	VehicleSize vehicleType;
 	int vehicleNumber;
 	int tokenNumber;
 	boolean payment = false;
 
-	public String getVehicleType() {
+	public VehicleSize getVehicleType() {
 		return vehicleType;
 	}
 
-	public void setVehicleType(String vehicleType) {
-		this.vehicleType = vehicleType;
+	public void setVehicleType(VehicleSize type) {
+		this.vehicleType = type;
 	}
 
 	public int getVehicleNumber() {

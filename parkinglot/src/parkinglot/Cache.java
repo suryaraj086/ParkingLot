@@ -7,8 +7,9 @@ public class Cache {
 
 	int token = 1;
 	Map<Integer, Floor> floorMap = new HashMap<Integer, Floor>();
-	Map<String, Vehicle> vehicleMap = new HashMap<String, Vehicle>();
-	Map<Integer, Token> tokenMap = new HashMap<Integer, Token>();
+	Map<Integer, Vehicle> vehicleMap = new HashMap<Integer, Vehicle>();
+	Map<Integer, Map<Integer, Token>> tokenMap = new HashMap<Integer, Map<Integer, Token>>();
+	Map<Integer, Payment> payment = new HashMap<Integer, Payment>();
 
 	Cache() {
 		for (int i = 1; i < 4; i++) {
@@ -17,8 +18,7 @@ public class Cache {
 		}
 	}
 
-	public int tokennumber()
-	{
+	public int tokennumber() {
 		return ++token;
 	}
 }
